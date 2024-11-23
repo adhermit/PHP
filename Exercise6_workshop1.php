@@ -1,9 +1,16 @@
 <?php
 $countries = [
-    ["name" => "Nepal", "population" => "2M"],
-    ["name" => "India", "population" => "3.5M"],
-    ["name" => "China", "population" => "3.25M"]
-]
+    ["name" => "Nepal", "population" => 2000000],
+    ["name" => "India", "population" => 3500000],
+    ["name" => "China", "population" => 3250000]
+];
+
+$bigcountry = $countries[0];
+foreach ($countries as $country) {
+    if ($country['population'] > $bigcountry['population']) {
+        $bigcountry = $country;
+    }
+}
 ?>
 
 
@@ -32,13 +39,17 @@ $countries = [
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($countries as $country){ ?>
+            <?php foreach ($countries as $country) { ?>
                 <tr>
                     <td><?= "{$country['name']}" ?></td>
+                    <td><?= "{$country['population']}" ?></td>
                 </tr>
-            <?php }?>
+            <?php } ?>
         </tbody>
     </table>
+    <p>
+        <?= "{$bigcountry['name']} has highest population which is {$bigcountry['population']}." ?>
+    </p>
 </body>
 
 </html>
