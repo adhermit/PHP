@@ -11,7 +11,7 @@ function checkGameAge(int $gameAge, int $userAge): bool
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
