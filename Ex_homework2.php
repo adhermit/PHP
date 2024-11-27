@@ -3,7 +3,7 @@ $movies = [
     ["title" => "Spiderman", "year" => "2002"],
     ["title" => "Amazing Spiderman", "year" => "2012"],
     ["title" => "Spiderman homecoming", "year" => "2017"]
-];
+]
 
 /*$oldMovie = '{$movies[0]}';
     
@@ -18,13 +18,6 @@ $movies = [
             echo $movies[2];
             break;
     }*/
-
-$oldmovie = $movies[0];
-foreach ($movies as $movie) {
-    if ($movie['year'] < $oldmovie['year']) {
-        $oldmovie = $movie;
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +31,12 @@ foreach ($movies as $movie) {
 
 <body>
     <ul>
-        <?php foreach ($movies as $movie) { ?>
+        <?php
+        $oldmovie = $movies[0];
+        foreach ($movies as $movie) {
+            if ($movie['year'] < $oldmovie['year']) {
+                $oldmovie = $movie;
+            } ?>
             <li>
                 <?= "Movie name: {$movie['title']}, Year: {$movie['year']}"; ?>
             </li>
