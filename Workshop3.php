@@ -7,7 +7,7 @@ $games = [
 
 function checkGameAge(int $gameAge, int $userAge): bool
 {
-    return $userAge <= $gameAge;
+    return $userAge < $gameAge;
 }
 ?>
 <!DOCTYPE html>
