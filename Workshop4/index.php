@@ -30,11 +30,11 @@ function generateMenu($menu)
 
 <body>
     <?php
-    generateMenu($mainMenu);
+        include generateMenu($mainMenu);
     ?>
 </body>
     <?php
-    generateMenu($footerMenu);
+        include generateMenu($footerMenu);
     ?>
 
 </html>
