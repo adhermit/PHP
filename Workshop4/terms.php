@@ -8,7 +8,6 @@
 </head>
 
 <body>
-    <h1>Tearms and Condition</h1>
     <p>Please read the following terms and condition before signining the contract</p>
 </body>
 
