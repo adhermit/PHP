@@ -21,7 +21,7 @@ function checkGameAge(int $gameAge, int $userAge): bool
 
 <body>
     <?php
-    $age = 20;
+    $age = 2;
     foreach ($games as $game) {
         if ($age >= $game['minimunAge']) { ?>
             <p><strong><?= "welcome to the {$game['name']}"; ?></strong></p>
