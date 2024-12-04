@@ -11,9 +11,9 @@ $footerMenu = [
 
 function generateMenu($menu)
 {
-    foreach ($menu as $mainMenu) { ?>
+    foreach ($menu as $item) { ?>
         <ul>
-            <li><a href="<?= $mainMenu['link']; ?>"><?= $mainMenu['name']; ?></li>
+            <li><a href="<?= $item['link']; ?>"><?= $item['name']; ?></a></li>
         </ul>
 <?php }
 }
@@ -29,12 +29,17 @@ function generateMenu($menu)
 </head>
 
 <body>
-    <?php
-    include generateMenu($mainMenu);
-    ?>
-    <?php
-    include generateMenu($footerMenu);
-    ?>
+    <header>
+        <?php
+        generateMenu($mainMenu);
+        ?>
+    </header>
+    <h1>Welcome to home page!</h1>
+    <footer>
+        <?php
+        generateMenu($footerMenu);
+        ?>
+    </footer>
 </body>
 
 </html>

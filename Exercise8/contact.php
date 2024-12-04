@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<?php
-include 'header.php';
-?>
-
-<body>
+<?php include_once "header.php"?>
     <h1><?= 'maharjanraman456@gmail.com';?> </h1>
-</body>
-<?php
-include 'footer.php';
-?>
-
-</html>
+<?php include_once "footer.php"?>

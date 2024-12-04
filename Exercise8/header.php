@@ -15,6 +15,3 @@
             <li><a href="contact.php"> Contact</li>
         </ul>
     </nav>
-</body>
-
-</html>
