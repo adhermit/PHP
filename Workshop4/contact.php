@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Contact Us:</h1>
-    <p>test1234@gmail.com</p>
-</body>
-
-</html>
+<?php include_once "header.php" ?>
+<h1>Contact Us:</h1>
+<p>test1234@gmail.com</p>
+<?php include_once "footer.php" ?>
