@@ -2,6 +2,9 @@
 $email = "test@gmail.com";
 $password = "ABC123";
 session_start();
+
+$isUserConnected = isset($_SESSION['user']);
+
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +20,15 @@ session_start();
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="login.php">Log In</a></li>
+
+            <li>
+                <?php if ($isUserConnected): ?>
+                    <a href="profile.php">Profile</a> |
+                    <a href="logout.php">Logout</a>
+                <?php else: ?>
+                    <a href="login.php">Log In</a>
+                <?php endif; ?>
+            </li>
+
         </ul>
     </nav>
