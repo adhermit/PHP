@@ -30,7 +30,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     if ($userEmail === $email && $userPassword === $password) {
         session_regenerate_id(true);
         $_SESSION['email'] = $userEmail;
-        header("Location: Login");
+        header("Location: profile.php");
     } else {
         echo " You are not allowed";
         header("Location: Login");
