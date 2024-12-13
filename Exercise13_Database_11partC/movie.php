@@ -4,7 +4,7 @@ require_once "libs/movies.php";
 
 if (isset($_GET["id"])) {
     $id = (int)$_GET["id"];
-    $movie = getMoviesByIndex($pdo, $id);
+    $movie = getMoviesById($pdo, $id);
 }
 
 if (isset($movie) && $movie) { ?>
