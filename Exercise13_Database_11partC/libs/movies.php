@@ -10,7 +10,7 @@ function getMoviesByIndex(PDO $pdo, int $id): array | bool
 {
     if (isset($pdo) && isset($id)) {
         $query = $pdo->prepare(
-            "SELECT movie.*, director.first_name AS director_name 
+            "SELECT movie.*, CONCAT(director.first_name, ' ', director.last_name) AS director_name 
              FROM movie 
              INNER JOIN director ON movie.director_id = director.id 
              WHERE movie.id = :id"
