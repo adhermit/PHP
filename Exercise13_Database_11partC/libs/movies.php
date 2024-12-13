@@ -9,7 +9,7 @@ function getMovies(PDO $pdo): array
 function getMoviesByIndex(PDO $pdo, int $id): array | bool
 {
     if (isset($pdo) && isset($id)) {
-        $query = $pdo->prepare("SELECT * FROM movies WHERE id = :id");
+        $query = $pdo->prepare("SELECT * FROM movie WHERE id = :id");
         $query->bindValue(":id", $id, PDO::PARAM_INT);
         $query->execute();
         return $query->fetch(PDO::FETCH_ASSOC) ?: false;
