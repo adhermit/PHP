@@ -1,6 +1,5 @@
 <?php
-$email = "test@gmail.com";
-$password = "ABC123";
+
 session_start();
 
 $isUserConnected = isset($_SESSION['user']);

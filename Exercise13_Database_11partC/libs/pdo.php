@@ -1,9 +1,7 @@
 <?php
-$db_name = "exercise_11partc_php";
-$db_user = "root";
-$db_password = "";
 try {
-    $pdo = new PDO('mysql:dbname=' . $db_name . ';host=localhost;charset=utf8mb4', $db_user, $db_password);
+    $config = parse_ini_file(dirname(__FILE__) . "/.env");
+    $pdo = new PDO('mysql:dbname=' . $config["db_name"] . ';host=' . $config["db_host"] . ';charset=utf8mb4', $config["db_user"], $config["db_password"]);
 } catch (Exception $e) {
     die('error:' . $e->getMessage());
 };
